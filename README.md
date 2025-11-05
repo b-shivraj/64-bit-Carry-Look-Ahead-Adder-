@@ -1,0 +1,34 @@
+**Project Overview** 
+
+The Project involves creating the 64 bit Carry Look ahead adder and implement it on the RTL to GDS flow.The steps include RTL coding, functional verification, synthesis, timing and power analysis, and physical design (including floorplanning, placement, clock tree synthesis, routing). 
+
+The following open-source tools are used in this flow:
+
+1. Yosys for Logic Synthesis
+2. OpenSTA for Timing and Power Analysis
+3. OpenROAD for Physical Design and Layout
+4. TCL Scripts for Flow Automation 
+
+**RTL to GDS Flow using Open-source Tools** 
+
+1. Write the RTL code in Verilog for the CLA.
+2. Develop a testbench to verify the functionality of the RTL design. This testbench is responsible for applying test vectors and checking the output.
+3. Perform logic synthesis using the NangateOCL.lib technology library, with the help of top.sdc file. This converts the RTL code into a gate-level netlist.
+4. Run static timing analysis using OpenSTA to ensure that the design meets the required timing constraints.
+5. Estimate the power consumption of the design using OpenSTA.
+
+Physical Design: 
+
+1. Start Physical Design
+2. Define the floorplan for the design, which includes the distribution of cells, macro blocks, and core area.
+3. Set up of power distribution network.
+4. Perform global placement, where the cells are placed roughly in the layout based on the floorplan.
+5. Refine the placement using detailed placement to optimize cell positions, taking into account timing, congestion, and other physical design constraints.
+6. Perform clock tree synthesis (CTS) to insert clock buffers and ensure balanced clock delivery to all registers.
+7. Perform final routing to connect all the cells using metal layers, ensuring that signal paths meet timing and physical design rules.
+
+**Physical Design Results** 
+
+
+<img width="1061" height="886" alt="adder64bit" src="https://github.com/user-attachments/assets/a4508304-3a1b-4fbe-af5e-b7f31b128640" />
+
